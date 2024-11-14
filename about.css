@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #121212;
+    display: flex;
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 0.5rem;
+    position: relative;
+}
+
+ul{
+    display: flex;
+    flex-direction: row nowrap;
+    gap: 4rem;
+    margin-inline: 3rem;
+    position: fixed;
+}
+
+li{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+a{ 
+    position: relative;
+    text-decoration: none;
+    color: 	#dba622;
+    font-family: monospace;
+    font-size: 2vh;
+}
+
+a:hover, a:focus{
+    text-decoration: underline;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.holder{
+    /* background-color: aquamarine; */
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.monkey{
+    opacity: 1;
+    animation: slideup 3s ease forwards;
+}
+
+@keyframes slideup {
+    from{
+        transform: translateY(300%);
+    }
+}
+
+
+.abt1{
+    /* background-color: grey; */
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    padding: 4.5rem;
+    animation: slideright 3s ease forwards;
+}
+
+span{
+    font-family: monospace;
+    font-size: 4rem;
+    color: #dba622; 
+}
+
+span:hover, span:focus{
+    text-shadow: 0 0 5px gold;
+    font-size: 4.5rem;
+    transition: 1s;
+}
+
+p{
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 4rem;
+    color: whitesmoke;
+    margin-right: 6rem;
+    text-shadow: 0 0 2px #dba622;
+}
+
+
+@keyframes slideright {
+    from{
+        transform: translateX(-300%);
+    }
+}
+
+p:hover, p:focus{
+    text-shadow: 0 0 4px #dba622;
+}
+
+.abt2{
+    /* background-color: grey; */
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    text-align: center;
+    padding: 4.5rem;
+    padding-top: 2rem;
+    animation: slideleft 2s ease forwards;
+}
+
+.abt2 p{
+    margin-left: 10.5rem;
+    animation: slideleft 3s ease forwards;
+}
+
+.abt span{
+    animation: slideleft 4s ease forwards;
+}
+
+@keyframes slideleft {
+    from{
+        transform: translateX(300%);
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0.1%;
+}
+
+footer p{
+    color: 	#dba622;
+    font-family: monospace;
+    font-size: 2vh;
+    padding: 0.5rem;
+    padding-right: 0.10rem;
+}

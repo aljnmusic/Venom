@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #121212;
+    display: flex;
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 0.5rem;
+    position: relative;
+}
+
+ul{
+    display: flex;
+    flex-direction: row nowrap;
+    gap: 4rem;
+    margin-inline: 3rem;
+    position: fixed;
+}
+
+li{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+a{ 
+    position: relative;
+    text-decoration: none;
+    color: 	#dba622;
+    font-family: monospace;
+    font-size: 2vh;
+}
+
+a:hover, a:focus{
+    text-decoration: underline;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.holder{
+    /* background-color: burlywood; */
+    width: 100%;
+    height: 93%;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+figure{
+    /* background-color: tomato; */
+    width: 32.5%;
+    height: 97.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+figure span{
+    font-family: monospace;
+    font-size: 4rem;
+    color: #dba622;
+    animation: slidedown 3s ease forwards;
+}
+
+figure span:hover{
+    text-shadow: 0 0 3px white;
+    font-size: 4.1rem;
+}
+
+figure p{
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 2vh;
+    margin-top: 1rem;
+    animation: slidedown 2.5s ease forwards;
+}
+
+figure p:hover{
+    text-shadow: 0 0 5px #dba622;
+    font-size: 2.5vh;
+}
+
+button{
+    margin: 1rem;
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 12rem;
+    font-family: monospace;
+    border-radius: 5px;
+    animation: slidedown 2s ease forwards;
+}
+
+button a{
+    text-decoration: none;
+    color:#121212;
+    font-family: monospace;
+    font-size: 2vh;
+}
+
+button a:hover{
+    background-color: #dba622;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #dba622;
+    color: whitesmoke;
+}
+
+@keyframes slidedown {
+    from{
+        transform: translateY(-900%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+figure .blue{
+    position: absolute;
+    bottom: 0.5%;
+    z-index: -1;
+    animation: slideup 2s ease forwards;
+}
+
+@keyframes slideup {
+    from{
+        transform: translateY(300%);
+    }
+}
+
+
+.figure2{
+    /* background-color: tomato; */
+    width: 32.5%;
+    height: 89vh;
+    position: absolute;
+    left: 0;
+    margin: 0.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two equal columns */
+    grid-template-rows: auto; /* Rows will adjust based on content */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.figure2 .list{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    animation: slideleft 2s ease forwards;
+}
+
+.figure2 .list img{
+    max-width: 100%;
+    height: auto;
+    /* animation: slideleft 3s ease forwards; */
+}
+
+#one{
+    animation: slideleft 2s ease forwards;
+}
+
+#two{
+    animation: slideleft 3s ease forwards;
+}
+
+#three{
+    animation: slideleft 3.5s ease forwards;
+}
+
+#four{
+    animation: slideleft 4s ease forwards;
+}
+
+.list:hover {
+    box-shadow: 0 0 5px gold;
+}
+
+@keyframes slideleft {
+    from{
+        transform: translateX(-300%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.section{
+    /* background-color: tomato; */
+    width: 32.5%;
+    height: 89vh;
+    position: absolute;
+    right: 0;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.section p{
+    font-family: monospace;
+    font-size: 4rem;
+    color: #dba622;
+    margin-top: 1rem;
+    border-bottom: 1px solid transparent;
+    animation: slideright 2s ease forwards;
+    transition: border-bottom 0.5s ease;
+}
+
+.section p:hover{
+    text-shadow: 0 0 3px white;
+    font-size: 4.1rem;
+    border-bottom: 1px solid #dba622;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0rem 0;
+    font-family: monospace;
+    font-size: 2vh;
+}
+
+.table th{
+    color: #dba622;
+    font-size: 2.5vh;
+    border-bottom: 1px solid transparent;
+    animation: slideright 3s ease forwards;
+    transition: border-bottom 0.5s ease; /* Transition for border-bottom */
+
+}
+
+.table th:hover{
+    text-shadow: 0 0 3px white;
+    font-size: 3vh;
+    border-bottom: 1px solid #dba622; /* Change border color on hover */
+
+}
+
+.table td {
+    color: whitesmoke;
+    font-size: 1.5vh;
+    animation: slideright 4s ease forwards;
+}
+
+.table td:hover{
+    text-shadow: 0 0 5px #121212;
+    font-size: 2vh;
+    background-color: #dba622;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.table th, .table td{
+    padding: 0.5rem;
+}
+
+@keyframes slideright {
+    from{
+        transform: translateX(300%);
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0.1%;
+}
+
+footer p{
+    color: 	#dba622;
+    font-family: monospace;
+    font-size: 2vh;
+    padding: 0.5rem;
+    padding-right: 0.10rem;
+}
